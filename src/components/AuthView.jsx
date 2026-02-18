@@ -1,13 +1,12 @@
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 
-export default function AuthView() {
+export default function AuthView({ onRegister, onLogin }) {
   return (
-    <section>
-      <div className="two-col">
-        <RegisterForm />
-        <LoginForm />
-      </div>
-    </section>
+    <div className="two-col">
+      <RegisterForm onRegister={onRegister} />
+      <LoginForm onLogin={onLogin} />
+    </div>
   );
 }
+
